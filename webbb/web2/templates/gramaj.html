@@ -1,0 +1,1203 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gramataj</title>
+    <link rel="stylesheet" href="{% static 'gramaj.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <nav>
+            <div class="logo">
+                <img class="resim" src=" {% static 'foto/icon.png' %} " alt="Logo" />
+                <h2>Dijital Tartım</h2>
+            </div>
+            <ul>
+                <li><a href="{%url 'index'%}">Anasayfa</a></li>
+                <li><a href="{%url 'gramaj'%}" class="active">Gramajlar</a></li>
+                <li><a href="{% url 'yemekyükle'%}">Fotoğraf Ölçüm</a></li>
+                <li><a href="{%url 'giriş'%}" class="btn active">Giriş Yap</a></li>
+            </ul>
+        </nav>
+    </div> 
+</header>
+            <section>
+                
+               <div class="container">
+                    <div class="row-data">
+                        <h3>Sağlıklı ve dengeli beslenmenin en önemli temellerinden biri, 
+                            aldığımız ve harcadığımız kalori miktarını dengede tutmaktır. <br>
+                          </h3>
+                          <h6>
+                            <br>Kalori cetvelleri, bu konuda bize yardımcı olan değerli araçlardır. 
+                            Bu web sitesinde, farklı besinlerin kalori değerlerini, besin öğelerini 
+                            ve porsiyon boyutlarını içeren kapsamlı bir kalori cetveli bulabilirsiniz.
+                        </h6>
+                    </div>
+               </div>
+            </section>
+        <div class="row card-container" >
+            <div class="card" style="width: 18rem; margin-top: 30px;">
+              <img src="{% static 'foto/fruit.jpeg' %}" class="card-img-top" alt="...">
+              
+              
+                <div class="card-body">
+                  <p class="card-text">Diyet yapmak, kendinize olan sevginizi ve disiplininizi göstermenin en güzel yoludur.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem; margin-top: 30px;">
+              <img src="{% static 'foto/fruit1.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Dengeli beslenmek, hem bedeninize hem de ruhunuza iyi gelir..</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem; margin-top: 30px;">
+                <img src=" {% static 'foto/fruit4.jpeg' %} " class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">Diyetinizin amacı, sadece kilo vermek değil, sağlıklı yaşam tarzını benimsemektir.</p>
+                </div>
+            </div>
+        </div>
+<!-- 2 satir bir sekilde tablo olusturmak -->
+      <div class="content-container site-container">
+        <div class="row">
+            <!-- 1. tablo -->
+            <div class="col-sm">
+            <table class="content-table">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Yemekler</th>
+                    <th scope="col">Porsiyon</th>
+                    <th scope="col">Kalori</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Pilav</td>
+                    <td>100g</td>
+                    <td>352kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <th scope="row">2</th>
+                    <td>Esmer Pirinç</td>
+                    <td>100g</td>
+                    <td>362kcal</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Makarna ve Peynir</td>
+                    <td>100g</td>
+                    <td>370kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                   <!-- 4. table -->
+                    <th scope="row">4</th>
+                    <td>Dal Makhani (Hint Bezelye Yemeği)</td>
+                    <td>100g</td>
+                    <td>330kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 5. table -->
+                    <th scope="row">5</th>
+                    <td>Tandır Ekmeği</td>
+                    <td>100g</td>
+                    <td>310kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 6. table -->
+                    <th scope="row">6</th>
+                    <td>Peynirli Pide</td>
+                    <td>100g</td>
+                    <td>275kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 7. table -->
+                    <th scope="row">7</th>
+                    <td>Kıymalı/Etli Pide</td>
+                    <td>100g</td>
+                    <td>297kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 8. table -->
+                    <th scope="row">8</th>
+                    <td>Rulo Köfte</td>
+                    <td>100g</td>
+                    <td>254kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 9. table -->
+                    <th scope="row">9</th>
+                    <td>Pizza</td>
+                    <td>100g</td>
+                    <td>267kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 10. table -->
+                    <th scope="row">10</th>
+                    <td>Çin Böreği</td>
+                    <td>100g</td>
+                    <td>250kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 11. table -->
+                    <th scope="row">11</th>
+                    <td>Domuz Pirzola</td>
+                    <td>100g</td>
+                    <td>225kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 12. table -->
+                    <th scope="row">12</th>
+                    <td>Pekin Ördeği</td>
+                    <td>100g</td>
+                    <td>225kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 13. table -->
+                    <th scope="row">13</th>
+                    <td>Kebap</td>
+                    <td>100g</td>
+                    <td>215kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 14. table -->
+                    <th scope="row">14</th>
+                    <td>Taco</td>
+                    <td>100g</td>
+                    <td>217kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 15. table -->
+                    <th scope="row">15</th>
+                    <td>Bulgur Pilavı</td>
+                    <td>100g</td>
+                    <td>215kcal</td>
+                  </tr>
+                   <tr class="active-row">
+                    <!-- 16. table -->
+                   <th scope="row">16</th>
+                   <td>Kızarmış Pirinç</td>
+                   <td>100g</td>
+                   <td>186kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 17. table -->
+                   <th scope="row">17</th>
+                   <td>Zeytinyağlı Dolma</td>
+                   <td>100g</td>
+                   <td>173kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 18. table -->
+                   <th scope="row">18</th>
+                   <td>Fırında Tavuk</td>
+                   <td>100g</td>
+                   <td>164kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 19. table -->
+                   <th scope="row">19</th>
+                   <td>Zeytinyağlı Enginar</td>
+                   <td>100g</td>
+                   <td>166kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 20. table -->
+                   <th scope="row">20</th>
+                   <td>Hünkar Beğendi</td>
+                   <td>100g</td>
+                   <td>174kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 21. table -->
+                   <th scope="row">21</th>
+                   <td>Humus</td>
+                   <td>100g</td>
+                   <td>177kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 22. table -->
+                   <th scope="row">22</th>
+                   <td>Burrito (Meksika Dürümü)</td>
+                   <td>100g</td>
+                   <td>163kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 23. table -->
+                   <th scope="row">23</th>
+                   <td>Paella</td>
+                   <td>100g</td>
+                   <td>156kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 24. table -->
+                   <th scope="row">24</th>
+                   <td>Kuzu Tandır</td>
+                   <td>100g</td>
+                   <td>150kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 25. table -->
+                   <th scope="row">25</th>
+                   <td>Patates Salatası</td>
+                   <td>100g</td>
+                   <td>143kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 26. table -->
+                   <th scope="row">26</th>
+                   <td>Yaprak Sarması</td>
+                   <td>100g</td>
+                   <td>141kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 27. table -->
+                   <th scope="row">27</th>
+                   <td>Karnıyarık</td>
+                   <td>100g</td>
+                   <td>134kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 28. table -->
+                   <th scope="row">28</th>
+                   <td>Spagetti Bolonez</td>
+                   <td>100g</td>
+                   <td>132kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 29. table -->
+                   <th scope="row">29</th>
+                   <td>Lazanya</td>
+                   <td>100g</td>
+                   <td>132kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 30. table -->
+                   <th scope="row">30</th>
+                   <td>Tavuklu Sezar Salata</td>
+                   <td>100g</td>
+                   <td>127kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 31. table -->
+                   <th scope="row">31</th>
+                   <td>Kıymalı Dolma</td>
+                   <td>100g</td>
+                   <td>114kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 32. table -->
+                   <th scope="row">32</th>
+                   <td>Chilli Conni Carneli (Kıymalı Fasulyesi)</td>
+                   <td>100g</td>
+                   <td>105kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 33. table -->
+                   <th scope="row">33</th>
+                   <td>Sığır Eti Güveci</td>
+                   <td>100g</td>
+                   <td>95kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 34. table -->
+                   <th scope="row">34</th>
+                   <td>Fırında Kurufasulye</td>
+                   <td>100g</td>
+                   <td>94kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 35. table -->
+                   <th scope="row">35</th>
+                   <td>Patates Püresi</td>
+                   <td>100g</td>
+                   <td>83kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 36. table -->
+                   <th scope="row">36</th>
+                   <td>Bezelye Çorbası</td>
+                   <td>100g</td>
+                   <td>75kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 37. table -->
+                   <th scope="row">37</th>
+                   <td>Zeytinyağlı Taze Fasulye</td>
+                   <td>100g</td>
+                   <td>56kcal</td>
+                 </tr>
+                </tbody>
+              </table>
+        </div>
+
+
+        <!-- 2. tablo -->
+                <div class="col-sm">
+            <table class="content-table">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Meyveler</th>
+                    <th scope="col">Porsiyon</th>
+                    <th scope="col">Kalori</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- 1. satır -->
+                    <th scope="row">1</th>
+                    <td>Ahududu</td>
+                    <td>100g</td>
+                    <td>52kcal</td>
+                  </tr>
+                  <!-- 2.satır -->
+                  <tr class="active-row">
+                    <th scope="row">2</th>
+                    <td>Akai</td>
+                    <td>100g</td>
+                    <td>70kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 3.satır -->
+                    <th scope="row">3</th>
+                    <td>Altın Çilek</td>
+                    <td>100g</td>
+                    <td>49kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                   <!-- 4. table -->
+                    <th scope="row">4</th>
+                    <td>Ananas</td>
+                    <td>100g</td>
+                    <td>50kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 5. table -->
+                    <th scope="row">5</th>
+                    <td>Avokado</td>
+                    <td>100g</td>
+                    <td>160kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 6. table -->
+                    <th scope="row">6</th>
+                    <td>Ayva</td>
+                    <td>100g</td>
+                    <td>57kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 7. table -->
+                    <th scope="row">7</th>
+                    <td>Armut</td>
+                    <td>100g</td>
+                    <td>57kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 8. table -->
+                    <th scope="row">8</th>
+                    <td>Böğürtlen</td>
+                    <td>100g</td>
+                    <td>43kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 9. table -->
+                    <th scope="row">9</th>
+                    <td>Dut</td>
+                    <td>100g</td>
+                    <td>43kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 10. table -->
+                    <th scope="row">10</th>
+                    <td>Elma</td>
+                    <td>100g</td>
+                    <td>52kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 11. table -->
+                    <th scope="row">11</th>
+                    <td>Elma Püresi</td>
+                    <td>100g</td>
+                    <td>68kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 12. table -->
+                    <th scope="row">12</th>
+                    <td>Erik</td>
+                    <td>100g</td>
+                    <td>46kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 13. table -->
+                    <th scope="row">13</th>
+                    <td>Frenk Üzümü</td>
+                    <td>100g</td>
+                    <td>56kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 14. table -->
+                    <th scope="row">14</th>
+                    <td>Guava</td>
+                    <td>100g</td>
+                    <td>68kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 15. table -->
+                    <th scope="row">15</th>
+                    <td>Hint Hurması</td>
+                    <td>100g</td>
+                    <td>239kcal</td>
+                  </tr>
+                   <tr class="active-row">
+                    <!-- 16. table -->
+                   <th scope="row">16</th>
+                   <td>Hurma</td>
+                   <td>100g</td>
+                   <td>282kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 17. table -->
+                   <th scope="row">17</th>
+                   <td>İncir</td>
+                   <td>100g</td>
+                   <td>74kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 18. table -->
+                   <th scope="row">18</th>
+                   <td>İri Muz</td>
+                   <td>100g</td>
+                   <td>122kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 19. table -->
+                   <th scope="row">19</th>
+                   <td>Jackfruit(tayland meyvesi)</td>
+                   <td>100g</td>
+                   <td>95kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 20. table -->
+                   <th scope="row">20</th>
+                   <td>Kan Portakalı</td>
+                   <td>100g</td>
+                   <td>50kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 21. table -->
+                   <th scope="row">21</th>
+                   <td>Karpuz</td>
+                   <td>100g</td>
+                   <td>30kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 22. table -->
+                   <th scope="row">22</th>
+                   <td>Kiraz</td>
+                   <td>100g</td>
+                   <td>50kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 23. table -->
+                   <th scope="row">23</th>
+                   <td>Kivi</td>
+                   <td>100g</td>
+                   <td>61kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 24. table -->
+                   <th scope="row">24</th>
+                   <td>Limon</td>
+                   <td>100g</td>
+                   <td>29kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 25. table -->
+                   <th scope="row">25</th>
+                   <td>Mandarin/Mandalina</td>
+                   <td>100g</td>
+                   <td>53kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 26. table -->
+                   <th scope="row">26</th>
+                   <td>Mango</td>
+                   <td>100g</td>
+                   <td>60kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 27. table -->
+                   <th scope="row">27</th>
+                   <td>Meyve Salatası</td>
+                   <td>100g</td>
+                   <td>50kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 28. table -->
+                   <th scope="row">28</th>
+                   <td>Nar</td>
+                   <td>100g</td>
+                   <td>83kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 29. table -->
+                   <th scope="row">29</th>
+                   <td>Papaya</td>
+                   <td>100g</td>
+                   <td>43kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 30. table -->
+                   <th scope="row">30</th>
+                   <td>Portakal</td>
+                   <td>100g</td>
+                   <td>47kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 31. table -->
+                   <th scope="row">31</th>
+                   <td>Yeşil Erik</td>
+                   <td>100g</td>
+                   <td>41kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 32. table -->
+                   <th scope="row">32</th>
+                   <td>Rambutan</td>
+                   <td>100g</td>
+                   <td>82kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 33. table -->
+                   <th scope="row">33</th>
+                   <td>Trabzon Hurması</td>
+                   <td>100g</td>
+                   <td>127kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 34. table -->
+                   <th scope="row">34</th>
+                   <td>Yabanmersini</td>
+                   <td>100g</td>
+                   <td>57kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 35. table -->
+                   <th scope="row">35</th>
+                   <td>Yayla Muzu</td>
+                   <td>100g</td>
+                   <td>21kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 36. table -->
+                   <th scope="row">36</th>
+                   <td>Yıldız Meyvesi</td>
+                   <td>100g</td>
+                   <td>31kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 37. table -->
+                   <th scope="row">37</th>
+                   <td>Çilek</td>
+                   <td>100g</td>
+                   <td>32kcal</td>
+                 </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+    <!-- alt kısmın 1.tablosu -->
+    <div class="content-container site-container">
+        <div class="row">
+            <!-- 1. tablo -->
+            <div class="col-sm">
+            <table class="content-table">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Fast Food</th>
+                    <th scope="col">Porsiyon</th>
+                    <th scope="col">Kalori</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- 1. satır -->
+                    <th scope="row">1</th>
+                    <td>Arby's Market Fresh Sandviç</td>
+                    <td>100g</td>
+                    <td>308kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 2.satır -->
+                    <th scope="row">2</th>
+                    <td>Arby's Roast Beef</td>
+                    <td>100g</td>
+                    <td>233kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 3.satır -->
+                    <th scope="row">3</th>
+                    <td>Arby's Roast Chicken</td>
+                    <td>100g</td>
+                    <td>203kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                   <!-- 4. table -->
+                    <th scope="row">4</th>
+                    <td>Balık Fileto</td>
+                    <td>100g</td>
+                    <td>282kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 5. table -->
+                    <th scope="row">5</th>
+                    <td>Balık Sandviç</td>
+                    <td>100g</td>
+                    <td>272kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 6. table -->
+                    <th scope="row">6</th>
+                    <td>Barbekü Kaburga</td>
+                    <td>100g</td>
+                    <td>212kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 7. table -->
+                    <th scope="row">7</th>
+                    <td>Burger King Bean Burger</td>
+                    <td>100g</td>
+                    <td>446kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 8. table -->
+                    <th scope="row">8</th>
+                    <td>Burger King Chipotle Etli Burger</td>
+                    <td>100g</td>
+                    <td>281kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 9. table -->
+                    <th scope="row">9</th>
+                    <td>Burger King Double Whopper</td>
+                    <td>100g</td>
+                    <td>239kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 10. table -->
+                    <th scope="row">10</th>
+                    <td>Burger King Tendercripts Spicy Burger</td>
+                    <td>100g</td>
+                    <td>404kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 11. table -->
+                    <th scope="row">11</th>
+                    <td>Burger King Texas Smoke Burger</td>
+                    <td>100g</td>
+                    <td>446kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 12. table -->
+                    <th scope="row">12</th>
+                    <td>Burger King Whopper</td>
+                    <td>100g</td>
+                    <td>231kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 13. table -->
+                    <th scope="row">13</th>
+                    <td>Cheeseburger</td>
+                    <td>100g</td>
+                    <td>263kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 14. table -->
+                    <th scope="row">14</th>
+                    <td>Domuz Eti Sandviç</td>
+                    <td>100g</td>
+                    <td>241kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 15. table -->
+                    <th scope="row">15</th>
+                    <td>Fish and Chips</td>
+                    <td>100g</td>
+                    <td>195kcal</td>
+                  </tr>
+                   <tr class="active-row">
+                    <!-- 16. table -->
+                   <th scope="row">16</th>
+                   <td>Füme Somon</td>
+                   <td>100g</td>
+                   <td>158kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 17. table -->
+                   <th scope="row">17</th>
+                   <td>Hamburger</td>
+                   <td>100g</td>
+                   <td>254kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 18. table -->
+                   <th scope="row">18</th>
+                   <td>Hindi</td>
+                   <td>100g</td>
+                   <td>104kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 19. table -->
+                   <th scope="row">19</th>
+                   <td>Izgara Tavuk Salata</td>
+                   <td>100g</td>
+                   <td>88kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 20. table -->
+                   <th scope="row">20</th>
+                   <td>İtalyan Sandviç</td>
+                   <td>100g</td>
+                   <td>183kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 21. table -->
+                   <th scope="row">21</th>
+                   <td>Köfteli Sandviç</td>
+                   <td>100g</td>
+                   <td>161kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 22. table -->
+                   <th scope="row">22</th>
+                   <td>Kıvrımlı Patates Kızartması</td>
+                   <td>100g</td>
+                   <td>311kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 23. table -->
+                   <th scope="row">23</th>
+                   <td>McDonalds Balık Fileto</td>
+                   <td>100g</td>
+                   <td>275kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 24. table -->
+                   <th scope="row">24</th>
+                   <td>McDonalds Big Mac</td>
+                   <td>100g</td>
+                   <td>256kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 25. table -->
+                   <th scope="row">25</th>
+                   <td>McDonalds Cheeseburger</td>
+                   <td>100g</td>
+                   <td>263kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 26. table -->
+                   <th scope="row">26</th>
+                   <td>McDonalds Double Cheeseburger</td>
+                   <td>100g</td>
+                   <td>282kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 27. table -->
+                   <th scope="row">27</th>
+                   <td>McDonalds McChicken</td>
+                   <td>100g</td>
+                   <td>251kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 28. table -->
+                   <th scope="row">28</th>
+                   <td>McDonalds McTurco Etli</td>
+                   <td>100g</td>
+                   <td>262kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 29. table -->
+                   <th scope="row">29</th>
+                   <td>McDonalds Yumurtalı McMuffin</td>
+                   <td>100g</td>
+                   <td>225kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 30. table -->
+                   <th scope="row">30</th>
+                   <td>Soğan Halkarı</td>
+                   <td>100g</td>
+                   <td>411kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 31. table -->
+                   <th scope="row">31</th>
+                   <td>Sosisli Sandviç</td>
+                   <td>100g</td>
+                   <td>411kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 32. table -->
+                   <th scope="row">32</th>
+                   <td>Steackhouse Burger</td>
+                   <td>100g</td>
+                   <td>280kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 33. table -->
+                   <th scope="row">33</th>
+                   <td>Tavuk Kanatları</td>
+                   <td>100g</td>
+                   <td>324kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 34. table -->
+                   <th scope="row">34</th>
+                   <td>Tavuk Göğsü</td>
+                   <td>100g</td>
+                   <td>163kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 35. table -->
+                   <th scope="row">35</th>
+                   <td>Tavuk Pizziola</td>
+                   <td>100g</td>
+                   <td>141kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 36. table -->
+                   <th scope="row">36</th>
+                   <td>Tavuklu Nugget</td>
+                   <td>100g</td>
+                   <td>296kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 37. table -->
+                   <th scope="row">37</th>
+                   <td>Vejeteryan Buton Sandviç</td>
+                   <td>100g</td>
+                   <td>138kcal</td>
+                 </tr>
+                </tbody>
+              </table>
+        </div>
+
+
+        <!-- alt kısmın 2. tablosu -->
+                <div class="col-sm">
+            <table class="content-table">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Unlu Mamuller</th>
+                    <th scope="col">Porsiyon</th>
+                    <th scope="col">Kalori</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- 1. satır -->
+                    <th scope="row">1</th>
+                    <td>Bagel</td>
+                    <td>100g</td>
+                    <td>257kcal</td>
+                  </tr>
+                  <!-- 2.satır -->
+                  <tr class="active-row">
+                    <th scope="row">2</th>
+                    <td>Baget</td>
+                    <td>100g</td>
+                    <td>274kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 3.satır -->
+                    <th scope="row">3</th>
+                    <td>Bazlama</td>
+                    <td>100g</td>
+                    <td>240kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                   <!-- 4. table -->
+                    <th scope="row">4</th>
+                    <td>Beyaz Ekmek</td>
+                    <td>100g</td>
+                    <td>238kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 5. table -->
+                    <th scope="row">5</th>
+                    <td>Bisküvi</td>
+                    <td>100g</td>
+                    <td>269kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 6. table -->
+                    <th scope="row">6</th>
+                    <td>Brioche</td>
+                    <td>100g</td>
+                    <td>346kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 7. table -->
+                    <th scope="row">7</th>
+                    <td>Browni</td>
+                    <td>100g</td>
+                    <td>405kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 8. table -->
+                    <th scope="row">8</th>
+                    <td>Cannoli</td>
+                    <td>100g</td>
+                    <td>254kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 9. table -->
+                    <th scope="row">9</th>
+                    <td>Chapati Pidesi</td>
+                    <td>100g</td>
+                    <td>240kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 10. table -->
+                    <th scope="row">10</th>
+                    <td>Cupcake</td>
+                    <td>100g</td>
+                    <td>305kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 11. table -->
+                    <th scope="row">11</th>
+                    <td>Donut</td>
+                    <td>100g</td>
+                    <td>421kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 12. table -->
+                    <th scope="row">12</th>
+                    <td>Elmalı Tart</td>
+                    <td>100g</td>
+                    <td>237kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 13. table -->
+                    <th scope="row">13</th>
+                    <td>Ekşi Mayalı Ekmek</td>
+                    <td>100g</td>
+                    <td>289kcal</td>
+                  </tr>
+                  <tr class="active-row">
+                    <!-- 14. table -->
+                    <th scope="row">14</th>
+                    <td>Esmer Ekmek</td>
+                    <td>100g</td>
+                    <td>250kcal</td>
+                  </tr>
+                  <tr>
+                    <!-- 15. table -->
+                    <th scope="row">15</th>
+                    <td>Grissini</td>
+                    <td>100g</td>
+                    <td>400kcal</td>
+                  </tr>
+                   <tr class="active-row">
+                    <!-- 16. table -->
+                   <th scope="row">16</th>
+                   <td>Hamburger Ekmeği</td>
+                   <td>100g</td>
+                   <td>178kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 17. table -->
+                   <th scope="row">17</th>
+                   <td>Ispanaklı Börek</td>
+                   <td>100g</td>
+                   <td>246kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 18. table -->
+                   <th scope="row">18</th>
+                   <td>İtalyan Ekmeği</td>
+                   <td>100g</td>
+                   <td>271kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 19. table -->
+                   <th scope="row">19</th>
+                   <td>İtalyan Pidesi</td>
+                   <td>100g</td>
+                   <td>249kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 20. table -->
+                   <th scope="row">20</th>
+                   <td>Krep</td>
+                   <td>100g</td>
+                   <td>224kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 21. table -->
+                   <th scope="row">21</th>
+                   <td>Kruvasan</td>
+                   <td>100g</td>
+                   <td>406kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 22. table -->
+                   <th scope="row">22</th>
+                   <td>Lavaş</td>
+                   <td>100g</td>
+                   <td>264kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 23. table -->
+                   <th scope="row">23</th>
+                   <td>Muzlu Ekmek</td>
+                   <td>100g</td>
+                   <td>326kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 24. table -->
+                   <th scope="row">24</th>
+                   <td>Mısır Ekmek</td>
+                   <td>100g</td>
+                   <td>179kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 25. table -->
+                   <th scope="row">25</th>
+                   <td>Panettone</td>
+                   <td>100g</td>
+                   <td>318kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 26. table -->
+                   <th scope="row">26</th>
+                   <td>Pankek</td>
+                   <td>100g</td>
+                   <td>233kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 27. table -->
+                   <th scope="row">27</th>
+                   <td>Pumpernick/Alman Ekmeği</td>
+                   <td>100g</td>
+                   <td>283kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 28. table -->
+                   <th scope="row">28</th>
+                   <td>Patatesli Ekmek</td>
+                   <td>100g</td>
+                   <td>266kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 29. table -->
+                   <th scope="row">29</th>
+                   <td>Pide</td>
+                   <td>100g</td>
+                   <td>268kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 30. table -->
+                   <th scope="row">30</th>
+                   <td>Pişi</td>
+                   <td>100g</td>
+                   <td>258kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 31. table -->
+                   <th scope="row">31</th>
+                   <td>Sodalı Ekmek</td>
+                   <td>100g</td>
+                   <td>290kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 32. table -->
+                   <th scope="row">32</th>
+                   <td>Sarımsaklı Ekmek</td>
+                   <td>100g</td>
+                   <td>350kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 33. table -->
+                   <th scope="row">33</th>
+                   <td>Su Böreği</td>
+                   <td>100g</td>
+                   <td>229kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 34. table -->
+                   <th scope="row">34</th>
+                   <td>Sufle</td>
+                   <td>100g</td>
+                   <td>204kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 35. table -->
+                   <th scope="row">35</th>
+                   <td>Tandır Ekmek</td>
+                   <td>100g</td>
+                   <td>275kcal</td>
+                 </tr>
+                 <tr class="active-row">
+                    <!-- 36. table -->
+                   <th scope="row">36</th>
+                   <td>Tortilla</td>
+                   <td>100g</td>
+                   <td>265kcal</td>
+                 </tr>
+                 <tr>
+                    <!-- 37. table -->
+                   <th scope="row">37</th>
+                   <td>Yufka</td>
+                   <td>100g</td>
+                   <td>236kcal</td>
+                 </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <iframe class="div1" style=" margin-left: 150px; margin-bottom: 70px; margin-top: 70px; width: 50%;" src="https://www.youtube.com/embed/j6npGAsPi8w?si=-ntxrpH_-7dgwzOp" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+        </div>
+        <div class="carousel-item">
+          <iframe class="div1" style="margin-left: 150px; margin-bottom: 70px; margin-top: 70px; width: 50%;" src="https://www.youtube.com/embed/7xQMNmihFXU?si=n5KQC6muSxLQHHFi" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+     <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+    <div class="footer">
+      <p> 2024 Gramaj Hesabı</p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>

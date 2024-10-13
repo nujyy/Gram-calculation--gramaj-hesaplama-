@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DİJİTAL TARTIM</title>
+    <link rel="stylesheet" href="{% static 'eski_sayfa.css' %}">
+    <!--font awesome link-->
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <img src="{% static 'foto/foto.jpg' %} " alt="arka plan resmi" class="arka-plan-foto">
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="{% static 'foto/icon.png' %} " alt="Logo" />
+                    <h2>Dijital Tartım</h2>
+                </div>
+                
+                <input type="checkbox" id="click">
+                <label for="click" class="mobile_menu_btn">
+                    <i class="fa-solid fa-bars-staggered" style="color: #1633d8;"></i>
+                </label>
+
+                <ul>
+                    <li><a href="{% url 'anasayfa2'%}" class="active">Anasayfa</a></li>
+                    <li><a href="{%url 'gramaj'%}">Gramajlar</a></li>
+                    <li><a href="{%url 'yemekyükle'%}">Fotoğraf Ölçüm</a></li>
+                    <li><a href="{% url 'profil'%}" class="btn active">{{user.username}}</a></li>
+                    <li><a href="{% url 'index'%}" class="btn active">Çıkış Yap</a></li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+   
+    <main class="main-content">
+        <section class="section-1">
+            <div class="container">
+                <br>
+                <div class="text">
+                    <h2>Online Gramaj Ölçümü ve Kalori Hesabı</h2>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="box1">
+                        <h1>Fotoğraf Yükleme</h1>
+                        <P>Diyet yapanlar için! Telefonunuzdan tabağınızın fotoğrafını çekerek anında gram ve kalori hesabı yapmak artık çok kolay.
+                             Artık tahminlere gerek yok, doğru ve hızlı hesaplama ile hedeflerinize daha kolay ulaşın. Hemen deneyin!</P>
+                        <a href="#" class="custom-button">Sayfaya gitmek için tıklayınız</a>
+                    </div>
+                    <div class="box2">
+                        <h1>Hazır Tablolar</h1>
+                        <P>Diyet yapanlar için müjde! Aradığınız bütün yiyeceklerin gramaja göre kalorileri artık burada! 
+                            Artık aramanıza son, tüm yiyeceklerin kalorileri parmaklarınızın ucunda. Zaman kazanın, daha sağlıklı 
+                            seçimler yapın ve hedeflerinize daha kolay ulaşın. Hemen keşfedin!
+                        </P>
+                        <a href="#" class="custom-button">Hazır tablolar için tıklayınız</a>
+                    </div>
+                </div>
+            
+        </section>
+        <section class="section-2">
+            <div class="makaleler_arkaplan">
+                <br><br><br>
+                <div class="heading">
+                    <h1>GÜNLÜK BLOGLAR</h1>
+                    <p>Aşağıda editörlerimizin siz değerli kullanıcılarımız için seçtiği, sağlığınız için oldukça önemli konulara değinen bloglar yer almaktadır.Keyifli okumalar.</p>
+                </div>
+    
+                <div class="container">
+                    <section class="about">
+                        <div class="about-image">
+                            <img src="{% static 'foto/su-.jpg' %}" alt="su resmi">
+                        </div>
+                        <div class="about-content">
+                            <h1>Suyun Önemi ve Günlük Su Tüketimi</h1>
+                            <p>Su, sağlık için gereklidir. Vücudunuz, vücut ısısını düzenlemek, organları ve dokuları korumak, besinlerin sindirimini kolaylaştırmak ve çok daha fazlası gibi 
+                                birçok işlev için suya ihtiyaç duyar.Sağlıklı bir yetişkin günde kilogram başına yaklaşık 35 ml su içmelidir. 50 kilo ağırlığındaki bir bireyin, 1.7 litre su içmesi 
+                                gerekiyor iken, 60 kilogram ağırlığındaki birey ise 2.1 litre, yani yaklaşık dört şişe su içmelidir.Su içmek vücuttaki sıvı dengesinin korunmasına ve sindirime yardımcı olur.
+                                Ayrıca cildinizin sağlıklı görünmesi için de oldukça önemlidir.
+                            </p>
+                            <a href="https://www.drmahmutdogan.com/blog/su-icmenin-faydalari#:~:text=Su%20i%C3%A7mek%2C%20sindirim%20sisteminizi%20destekler,ishal%20tedavisine%20de%20yard%C4%B1mc%C4%B1%20olur"class="devam">Devamı için Tıklayınız.</a>
+                    </section>
+                </div>
+                <div class="container2">
+                    <section class="about2">
+                        
+                        <div class="about-content2">
+                            <h1>Mevsimsel Meyve ve Sebze Tüketimi</h1>
+                            <p>Mevsiminde sebze ve meyve tüketmek, sağlıklı bir yaşam için önemli bir adımdır. Doğanın döngüsüne uygun olarak tüketilen bu besinler, vücudumuzun ihtiyaç duyduğu pek çok besin öğesini içerir. 
+                                Sağlıklı bir yaşam için, mevsimlik sebze ve meyveleri beslenme düzenimize dahil etmek önemlidir. Bağışıklık sistemini güçlendirir, sindirim sistemini düzenler. Kişiye daha kaliteli yaşam biçimi
+                                 sunar.
+                            </p>
+                            <a href="https://rakun.blog/mevsiminde-sebze-ve-meyve-tuketmek-neden-onemli/" class="devam">Devamı için Tıklayınız.</a>
+                        </div>
+                        <div class="about-image2">
+                            <img src="{% static 'foto/sebze2.jpg' %}" alt="meyve resmi">
+                        </div>
+                    </section>
+                </div>
+                        
+                <div class="container3">
+                    <section class="about3">
+                        <div class="about-image3">
+                            <img src="{% static 'foto/spor.png' %}" alt="spor resmi">
+                        </div>
+                        <div class="about-content3">
+                            <h1>Düzenli Spor Yapmanın Önemi</h1>
+                            <p>Düzenli spor yapmak kişinin hem fiziksel hem de ruhsal sağlığı için oldukça yararlıdır.Spor yapmanın fiziksel faydaları sadece kondisyon, esneklik ve dengeyi geliştirmekle bitmez. 
+                                Spor yoluyla düzenli aktivite kalp hastalığı, diyabet ve bazı kanserler gibi kronik hastalıklara yakalanma riskini de azaltabilir. Ek olarak, düzenli egzersiz ruh halinizi iyileştirebilir ve depresyon ve 
+                                anksiyete seviyelerini azaltmaya yardımcı olabilir. Spora katılmak aynı zamanda daha güçlü kemikler oluşturmaya yardımcı olabilir; bu da özellikle yaşlı yetişkinler için osteoporoz riskini azaltmaya yardımcı olması açısından önemlidir.
+                            </p>
+                            <a href="https://www.ecevahapoglu.com/spor-yapmanin-hayatimiza-kattigi-faydalar/" class="devam">Devamı için Tıklayınız.</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+    </main>
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>DİJİTAL <span>TARTIM</span></h3>
+            <p class="footer-links">
+                <a href="#">Anasayfa</a>
+                |
+                <a href="#">Gramajlar</a>
+                |
+                <a href="#">Fotoğraf Ölçüm</a>
+                |
+                <a href="#">İletişim</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2024 <strong>KOU-WEB DEVELOPERS</strong> All rights reserved.</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <p><span>KOCAELİ ÜNİVERSİTESİ</span></p>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <p>(0262)303 10 00</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p><a href="https://webmail.kocaeli.edu.tr/?mailto&to=mailto%3Akurumsaliletisim%40kocaeli.edu.tr">MAİL</a></p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-about">
+                <span>About Us </span>
+                <strong>KOU-WEB DEVELOPERS </strong>takımı olarak HTML - CSS - BOOTSTRAP kullanarak bu web siteyi hazırladık.
+            </p>
+            <div class="footer-icons">  <!--burda lileri incele yanlış olabilir-->
+                <a href="https://www.facebook.com/kou92official/?locale=tr_TR"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kou92official/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tr.linkedin.com/school/kocaeli-university/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com/kou92official?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/c/kocaeli%C3%BCniversitesi"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
